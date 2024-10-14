@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Publicación</title>
+</head>
+<body>
+    <h1>Crear una nueva publicación</h1>
+    
+    <form action="">
+        <label for="titulo">Título</label>
+        <input type="text" name="titulo" placeholder="Título de la publicación">
+
+        <label for="etiquetas">Etiquetas</label>
+        <input type="text" name="etiquetas" placeholder="Curiosidades, teorías, descubrimientos recientes, etcétera">
+
+        <label for="configuracion">Configuración de la publicación</label>
+        <input type="checkbox" name="configuracion">
+        <label for="configuracion">Anclar publicación</label>
+
+        <label for="visibilidad">Visibilidad</label>
+        <input type="radio" name="visibilidad" value="publica">
+        <label for="publica">Pública</label>
+        <input type="radio" name="visibilidad" value="privada">
+        <label for="privada">Privada</label>
+
+        <label for="archivos">Insertar archivos</label>
+        <input type="file" name="archivos">
+
+        <label for="categoria">Categoría</label>
+        <select name="categoria" id="categoria">
+            <option value="carnivoros">Carnívoros</option>
+        </select>
+
+        <input type="submit" value="PUBLICAR">
+        <input type="button" value="VISTA PREVIA">
+        <input type="button" value="GUARDAR BORRADOR">
+
+    </form>
+</body>
+</html>
