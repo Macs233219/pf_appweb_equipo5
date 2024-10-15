@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrarse.css">
     <title>Registrarse</title>
 </head>
+
 <body>
-    <img src="" alt="Logo de Dinosaurio">
-    <h1>REGISTRARSE</h1>
+    <div class="registrarse">
+        <img class="img-titulo" src="./imgs/logo-dinosaurio.png" alt="Logo de Dinosaurio">
+        <h1>REGISTRARSE</h1>
+    </div>
     <form action="">
-        <label for="nombres">NOMBRES</label>
-        <input type="text" name="nombres" placeholder="NOMBRES">
+        <div class="formulario">
+            <div columna>
+                <label for="nombres">NOMBRES</label>
+                <div>
+                    <input type="text" name="nombres" placeholder="NOMBRES">
+                </div>
+                <label for="correo">CORREO</label>
+                <div>
+                    <input type="email" name="correo" placeholder="CORREO@DOMINIO.COM">
+                </div>
+                <label for="usuario">NOMBRE DE USUARIO</label>
+                <div>
 
-        <label for="apellidos">APELLIDOS</label>
-        <input type="text" name="apellidos" placeholder="APELLIDOS">
+                    <input type="text" name="usuario" placeholder="NOMBRE DE USUARIO">
+                </div>
+                <label for="estados">ESTADO</label>
+                <div>
 
-        <label for="correo">CORREO</label>
-        <input type="email" name="correo" placeholder="CORREO@DOMINIO.COM">
+                    <select class="selector" name="estado" id="estado">
+                        <option value="sonora">SONORA</option>
+                    </select>
+                </div>
+                <label for="municipio">MUNICIPIO</label>
+                <div>
+                    <input type="text" name="municipio" placeholder="MUNICIPIO">
+                </div>
+                <label for="genero">GÉNERO</label>
+                <div>
+                    <input type="radio" name="genero" value="masculino">
+                    <label class="genero" for="masculino">MASCULINO</label>
+                    <input type="radio" name="genero" value="femenino">
+                    <label class="genero" for="femenino">FEMENINO</label>
+                </div>
+                <label for="fecha">FECHA DE NACIMIENTO</label>
+                <div>
+                    <input type="date">
+                </div>
+            </div>
 
-        <label for="telefono">TELÉFONO</label>
-        <input type="tel" name="telefono" placeholder="###-###-####">
+            <div columna>
+                <label for="apellidos">APELLIDOS</label>
+                <div>
+                    <input type="text" name="apellidos" placeholder="APELLIDOS">
+                </div>
+                <label for="telefono">TELÉFONO</label>
+                <div>
+                    <input type="tel" name="telefono" placeholder="#########" maxlength="10">
+                </div>
+                <label for="contrasena">CONTRASEÑA</label>
+                <div>
+                    <input type="password" name="contrasena" placeholder="CONTRASEÑA">
+                </div>
+                <label for="ciudad">CIUDAD</label>
+                <div>
+                    <select class="selector" name="ciudad" id="ciudad">
+                        <option value="obregon">OBREGÓN</option>
+                    </select>
+                </div>
+                <label for="avatar">AVATAR</label>
+                <div>
+                    <img class="avatar" src="./imgs/avatar.png" alt="Imagen de avatar">
+                </div>
+                <div>
+                    <label class="avatar-boton" for="avatar">SUBIR IMAGEN</label>
+                    <input class="avatar-input" type="file" name="avatar">
+                </div>
+            </div>
+        </div>
 
-        <label for="usuario">NOMBRE DE USUARIO</label>
-        <input type="text" name="usuario" placeholder="NOMBRE DE USUARIO">
-
-        <label for="contrasena">CONTRASEÑA</label>
-        <input type="password" name="contrasena" placeholder="CONTRASEÑA">
-
-        <label for="estados">ESTADO</label>
-        <select name="estado" id="estado">
-            <option value="sonora">SONORA</option>
-        </select>
-
-        <label for="ciudad">CIUDAD</label>
-        <select name="ciudad" id="ciudad">
-            <option value="obregon">OBREGÓN</option>
-        </select>
-
-        <label for="municipio">MUNICIPIO</label>
-        <input type="text" name="municipio" placeholder="MUNICIPIO">
-
-        <label for="genero">GÉNERO</label>
-        <input type="radio" name="genero" value="masculino">
-        <label for="masculino">MASCULINO</label>
-        <input type="radio" name="genero" value="femenino">
-        <label for="femenino">FEMENINO</label>
-
-        <label for="avatar">AVATAR</label>
-        <input type="file">
-
-        <label for="fecha">FECHA DE NACIMIENTO</label>
-        <input type="date">
-
-        <img src="" alt="Imagen de botón de dinosaurio">
-        <input type="submit" value="REGISTRARSE">
+        <div class="boton-registrarse">
+            <img class="img-boton" src="./imgs/boton-dinosaurio.png" alt="Imagen de botón de dinosaurio">
+            <input type="submit" value="REGISTRARSE">
+        </div>
     </form>
 </body>
+
 </html>

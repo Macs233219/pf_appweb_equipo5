@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter";
+    margin: 4px;
+    background-color: #AED085;
+}
+
+body {
+    font-weight: 500;
+    padding: .5rem;
+    margin: 4rem 25rem;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+div {
+    background-color: white;
+    margin: 0px;
+}
+
+label {
+    background-color: white;
+}
+
+h1 {
+    background-color: white;
+}
+
+form {
+    background-color: white;
+}
+
+input {
+    background-color: white;
+    padding: .3rem;
+    border: 1px solid #B4B1B1;
+    border-radius: .3rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.linea{
+    margin: 5px;
+    background-color: #B4B1B1;
+    height: 1px;
+}
+
+.input-titulo-etiqueta{
+    width: 90%;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+}
+
+.contenedor-titulo-etiqueta {
+    flex: 70%;
+}
+
+.contenedor-config {
+    margin-top: 20px;
+    flex: 30%;
+}
+
+.label-config {
+    font-weight: 300;
+}
+
+textarea {
+    background-color: white;
+    padding: .3rem;
+    border: 1px solid #B4B1B1;
+    border-radius: .3rem;
+    height: 380px;
+    width: 98%;
+}
+
+input[type="file"] {
+    background-color: white;
+    padding: .3rem;
+    border: 1px solid #B4B1B1;
+    border-radius: .3rem;
+    height: 60px;
+    width: 98%;
+}
+
+.boton {
+    font-size: .9rem;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.verde-oscuro {
+    color: white;
+    background-color: #515D41;
+    border: 2px solid #515D41;
+}
+
+.verde-claro {
+    color: black;
+    background-color: #96A97C;
+    border: 2px solid #62775B;
+}
