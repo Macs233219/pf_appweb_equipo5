@@ -1,95 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administrar Publicaciones</title>
-  </head>
-  <body>
-    <div>
-      <img src="" alt="Logotipo" />
-      <form action="">
-        <input type="text" name="buscador" placeholder="BUSCAR" />
-      </form>
-      <img src="" alt="Perfil" />
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Dinosaurios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+          <div class="custom-logo2">
+              <img src="Imagenes/4.jpeg" alt="Logo personalizado">
+          </div>
+          <div class="search-bar">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Buscar">
+          </div>
+          <div class="profile">
+              <img src="Imagenes/2.jpeg" alt="Perfil">
+              <span>Perfil</span>
+          </div>
+      </header>
+      
+      
+        
+        <!-- Lista de publicaciones -->
+        <div class="post-list">
+            <div class="post-item">
+                <img src="Imagenes/5.jpeg" alt="Tipos de Dinosaurios">
+                <div class="post-content">
+                    <h3>Tipos de Dinosaurios</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <span class="date">12 de septiembre de 2024</span>
+                </div>
+                <div class="post-info">
+                  <div class="usuario"> 
+                    <span>Usuario #2</span>
+                    <img  style="
+                    width: 45px !important;
+                    height: 45px !important;" src="Imagenes/1.jpeg" alt="Tipos de Dinosaurios">
+                  </div>
+
+                    <div class="icons">
+                      <i class="fas fa-trash-alt fa-2x" style="color: #fe0b0b;"></i>
+                        <span>44 <i class="fas fa-eye"></i></span>
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <img src="Imagenes/8.jpg" alt="Fósiles antiguos">
+                <div class="post-content">
+                    <h3>Fósiles antiguos</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <span class="date">12 de septiembre de 2024</span>
+                </div>
+                <div class="post-info">
+                  <div class="usuario" > 
+                    <span>Usuario #3</span>
+                    <img  style="
+                    width: 45px !important;
+                    height: 45px !important;" src="Imagenes/6.jpeg" alt="Tipos de Dinosaurios">
+                  </div>
+                    
+                    <div class="icons">
+                      <i class="fas fa-trash-alt fa-2x" style="color: #fe0b0b;"></i>
+                        <span>23 <i class="fas fa-eye"></i></span>
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <img src="Imagenes/9.jpg" alt="Dinosaurios herbívoros">
+                <div class="post-content">
+                    <h3>Dinosaurios herbívoros</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <span class="date">12 de septiembre de 2024</span>
+                </div>
+                <div class="post-info">
+                  <div class="usuario">
+                    <span>Usuario #1</span>
+                    <img  style="
+                    width: 45px !important;
+                    height: 45px !important;" src="Imagenes/3.jpeg" alt="Tipos de Dinosaurios">
+                  </div>
+                 
+                    <div class="icons">
+                      <i class="fas fa-trash-alt fa-2x" style="color: #fe0b0b;"></i>
+                        <span>69 <i class="fas fa-eye"></i></span>
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Paginación -->
+        <div class="pagination">
+            <i class="fas fa-chevron-left"></i>
+            <span>4</span>
+            <i class="fas fa-chevron-right"></i>
+        </div>
     </div>
-
-    <div>
-      <img src="" alt="Imagen de publicación" />
-
-      <div>
-        <h4>Tipos de Dinosaurios</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-          corporis ab voluptas, quibusdam eius provident consequatur ipsa soluta
-          qui iusto in reiciendis, assumenda nemo dolores consectetur debitis
-          eaque, facilis cum!Lorem
-        </p>
-        <p>12 de septiembre de 2024</p>
-      </div>
-
-      <div>
-        <h4>Usuario #2</h4>
-        <img src="" alt="Foto de perfil" />
-      </div>
-
-      <div>
-        <img src="" alt="Icono para eliminar" />
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="Imagen de publicación" />
-
-      <div>
-        <h4>Tipos de Dinosaurios</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-          corporis ab voluptas, quibusdam eius provident consequatur ipsa soluta
-          qui iusto in reiciendis, assumenda nemo dolores consectetur debitis
-          eaque, facilis cum!Lorem
-        </p>
-        <p>12 de septiembre de 2024</p>
-      </div>
-
-      <div>
-        <h4>Usuario #2</h4>
-        <img src="" alt="Foto de perfil" />
-      </div>
-
-      <div>
-        <img src="" alt="Icono para eliminar" />
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="Imagen de publicación" />
-
-      <div>
-        <h4>Tipos de Dinosaurios</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-          corporis ab voluptas, quibusdam eius provident consequatur ipsa soluta
-          qui iusto in reiciendis, assumenda nemo dolores consectetur debitis
-          eaque, facilis cum!Lorem
-        </p>
-        <p>12 de septiembre de 2024</p>
-      </div>
-
-      <div>
-        <h4>Usuario #2</h4>
-        <img src="" alt="Foto de perfil" />
-      </div>
-
-      <div>
-        <img src="" alt="Icono para eliminar" />
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="Flecha izquierda" />
-      <p>4</p>
-      <img src="" alt="Flecha derecha" />
-    </div>
-  </body>
+</body>
 </html>
