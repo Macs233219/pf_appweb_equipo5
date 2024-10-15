@@ -4,16 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="iniciarSesion.css" />
   </head>
   <body>
-    <img src="" alt="Logo de dinosaurio" />
-    <h1>INICIAR SESIÓN</h1>
+    <div class="presentacion">
+      <img
+        src="publicacion_imgs/fosil.png"
+        alt="Logo de dinosaurio"
+        width="180"
+        height="180"
+      />
+      <h1>INICIAR SESIÓN</h1>
+    </div>
+
     <form action="">
-        <label for="usuario"><img src="" alt="Imagen de usuario"></label>
-      <input type="text" name="usuario" placeholder="USUARIO" />
-      <label for="contrasena"><img src="" alt="Imagen de contraseña"></label>
-      <input type="password" name="contrasena" placeholder="CONTRASEÑA" />
-      <input type="submit" value="ENTRAR" />
+      <div class="formulario">
+        <div class="campo">
+          <input type="text" name="usuario" placeholder="USUARIO" />
+        </div>
+        <div>
+          <input type="password" name="contrasena" placeholder="CONTRASEÑA" />
+        </div>
+        <input type="submit" value="ENTRAR" class="boton"/>
+      </div>
     </form>
   </body>
 </html>
