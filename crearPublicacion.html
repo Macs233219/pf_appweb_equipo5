@@ -18,9 +18,9 @@
                 <label for="titulo">Título</label>
                 <div>
                     <input class="input-titulo-etiqueta" type="text" name="titulo"
-                        placeholder="Título de la publicación">
+                        placeholder="Título de la publicación" required>
                 </div>
-                <label for="etiquetas">Etiquetas</label>
+                <label for="etiquetas" required>Etiquetas</label>
                 <div>
                     <input class="input-titulo-etiqueta" type="text" name="etiquetas"
                         placeholder="Curiosidades, teorías, descubrimientos recientes, etcétera">
@@ -36,7 +36,7 @@
                 <div class="configuracion">
                     <label for="visibilidad">Visibilidad</label>
                     <div>
-                        <input type="radio" name="visibilidad" value="publica">
+                        <input type="radio" name="visibilidad" value="publica" checked>
                         <label class="label-config" for="publica">Pública</label>
                         <input type="radio" name="visibilidad" value="privada">
                         <label class="label-config" for="privada">Privada</label>
@@ -48,7 +48,7 @@
         <div>
             <label for="contenido">Contenido</label>
             <div>
-                <textarea name="contenido" id="" placeholder="Escribe el contenido de tu publicacion"></textarea>
+                <textarea name="contenido" id="" placeholder="Escribe el contenido de tu publicacion" required></textarea>
             </div>
         </div>
         <label for="archivos">Insertar archivos</label>
