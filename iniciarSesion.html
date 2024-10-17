@@ -7,26 +7,44 @@
     <link rel="stylesheet" href="iniciarSesion.css" />
   </head>
   <body>
-    <div class="presentacion">
-      <img
-        src="imgs/logo-dinosaurio.png"
-        alt="Logo de dinosaurio"
-        width="180"
-        height="180"
-      />
-      <h1>INICIAR SESIÓN</h1>
+
+    <div class="arbusto-izquierdo">
+      <img src="imgs/arbusto_izquierdo.png" alt="">
+    </div>
+    
+    <div>
+      <div class="presentacion">
+        <img
+          src="imgs/logo-dinosaurio.png"
+          alt="Logo de dinosaurio"
+          width="180"
+          height="180"
+        />
+        <h1>INICIAR SESIÓN</h1>
+      </div>
+  
+      <form action="inicio.html">
+        <div class="formulario">
+          <div class="campo">
+            <label for="usuario"><img src="imgs/avatar_3.png" alt="imagen de usuario" height="40" width="40"></label>
+            <input type="text" name="usuario" placeholder="USUARIO" required/>
+          </div>
+          <div>
+            <label for="contrasena"><img src="imgs/huellas.png" alt="imagen de usuario" height="40" width="40"></label>
+            <input type="password" name="contrasena" placeholder="CONTRASEÑA" required/>
+          </div>
+          <input type="submit" value="ENTRAR" class="boton"/>
+        </div>
+      </form>
+  
+      <div class="enlace-registrarse">
+        <a href="registrarse.html">CREAR CUENTA</a>
+      </div>
     </div>
 
-    <form action="">
-      <div class="formulario">
-        <div class="campo">
-          <input type="text" name="usuario" placeholder="USUARIO" required/>
-        </div>
-        <div>
-          <input type="password" name="contrasena" placeholder="CONTRASEÑA" required/>
-        </div>
-        <input type="submit" value="ENTRAR" class="boton"/>
-      </div>
-    </form>
+    <div class="arbusto-derecho">
+      <img src="imgs/arbusto_derecho.png" alt="">
+    </div>
+
   </body>
 </html>

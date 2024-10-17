@@ -205,3 +205,12 @@ header {
     transform: rotate(-30deg); /* Rotación para darle estilo */
 }
 
+a:link {
+    text-decoration: none;
+    margin: 0;
+}
+
+h3:hover {
+    color: #708f47;
+    cursor: pointer;
+}

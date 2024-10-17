@@ -129,3 +129,15 @@ input[type="file"]{
     justify-content: center;
     gap: 10px;
 }
+
+.avatar-boton:hover {
+    background-color: #708f47;
+    color: black;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #708f47;
+    color: black;
+    cursor: pointer;
+}
