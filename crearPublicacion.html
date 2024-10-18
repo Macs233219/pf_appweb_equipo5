@@ -9,59 +9,74 @@
 </head>
 
 <body>
-    <h1>Crear una nueva publicación</h1>
-    <div class="linea"></div>
-    <form action="">
 
-        <div class="contenedor">
-            <div class="contenedor-titulo-etiqueta">
-                <label for="titulo">Título</label>
-                <div>
-                    <input class="input-titulo-etiqueta" type="text" name="titulo"
-                        placeholder="Título de la publicación" required>
-                </div>
-                <label for="etiquetas" required>Etiquetas</label>
-                <div>
-                    <input class="input-titulo-etiqueta" type="text" name="etiquetas"
-                        placeholder="Curiosidades, teorías, descubrimientos recientes, etcétera">
-                </div>
-            </div>
+    <header class="barra-navegacion">
+        <div class="custom-logo2">
+          <a href="inicio.html"><img src="imgs/logo-dinosaurio.png" alt="Logo personalizado"></a>
+        </div>
+        <div class="search-bar">
+        </div>
+        <div class="profile">
+          <img src="imgs/avatar_1.png" alt="Perfil">
+          <span>Perfil</span>
+        </div>
+      </header>
 
-            <div class="contenedor-config">
-                <label for="configuracion">Configuración de la publicación</label>
-                <div>
-                    <input type="checkbox" name="configuracion">
-                    <label class="label-config" for="configuracion">Anclar publicación</label>
-                </div>
-                <div class="configuracion">
-                    <label for="visibilidad">Visibilidad</label>
+    <div class="cuerpo">
+        <h1>Crear una nueva publicación</h1>
+        <div class="linea"></div>
+        <form action="">
+    
+            <div class="contenedor blanco">
+                <div class="contenedor-titulo-etiqueta">
+                    <label for="titulo">Título</label>
                     <div>
-                        <input type="radio" name="visibilidad" value="publica" checked>
-                        <label class="label-config" for="publica">Pública</label>
-                        <input type="radio" name="visibilidad" value="privada">
-                        <label class="label-config" for="privada">Privada</label>
+                        <input class="input-titulo-etiqueta" type="text" name="titulo"
+                            placeholder="Título de la publicación" required>
+                    </div>
+                    <label for="etiquetas" required>Etiquetas</label>
+                    <div>
+                        <input class="input-titulo-etiqueta" type="text" name="etiquetas"
+                            placeholder="Curiosidades, teorías, descubrimientos recientes, etcétera">
+                    </div>
+                </div>
+    
+                <div class="contenedor-config">
+                    <label for="configuracion">Configuración de la publicación</label>
+                    <div>
+                        <input type="checkbox" name="configuracion">
+                        <label class="label-config" for="configuracion">Anclar publicación</label>
+                    </div>
+                    <div class="configuracion">
+                        <label for="visibilidad">Visibilidad</label>
+                        <div>
+                            <input type="radio" name="visibilidad" value="publica" checked>
+                            <label class="label-config" for="publica">Pública</label>
+                            <input type="radio" name="visibilidad" value="privada">
+                            <label class="label-config" for="privada">Privada</label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div>
-            <label for="contenido">Contenido</label>
+    
             <div>
-                <textarea name="contenido" id="" placeholder="Escribe el contenido de tu publicacion" required></textarea>
+                <label for="contenido">Contenido</label>
+                <div>
+                    <textarea name="contenido" id="" placeholder="Escribe el contenido de tu publicacion" required></textarea>
+                </div>
             </div>
-        </div>
-        <label for="archivos">Insertar archivos</label>
-        <div class="contenedor-file">
-            <input type="file" name="archivos">
-        </div>
-        <div class="linea"></div>
-        <div>
-            <input class="boton verde-oscuro" type="submit" value="PUBLICAR">
-            <input class="boton verde-claro" type="button" value="VISTA PREVIA">
-            <input class="boton verde-claro" type="button" value="GUARDAR BORRADOR">
-        </div>
-    </form>
+            <label for="archivos">Insertar archivos</label>
+            <div class="contenedor-file">
+                <input type="file" name="archivos">
+            </div>
+            <div class="linea"></div>
+            <div>
+                <input class="boton verde-oscuro" type="submit" value="PUBLICAR">
+                <input class="boton verde-claro" type="button" value="VISTA PREVIA">
+                <input class="boton verde-claro" type="button" value="GUARDAR BORRADOR">
+            </div>
+        </form>
+    </div>
 
 </body>
 
