@@ -4,7 +4,7 @@ Este proyecto se centra en el tema de **Dinosaurios**, donde hemos desarrollado 
 
 ## Integrantes del equipo
 
-- **Marlon Peres Rodríguez** - ID: 205500
+- **Marlon Alejandro Canché Sastré** - ID: 233219
 - **José Pablo Páez López** - ID: 216711
 - **Héctor Andrés Lagarda Alcántar** - ID: 204733
 
