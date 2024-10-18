@@ -73,13 +73,13 @@
                     </select>
                 </div>
                 <label for="avatar">AVATAR</label>
-                <div>
-                    <img class="avatar" src="./imgs/avatar.png" alt="Imagen de avatar">
-                </div>
-                <div>
-                    <label class="avatar-boton" for="avatar">SUBIR IMAGEN</label>
-                    <input class="avatar-input" type="file" name="avatar"/>
-                </div>
+<div>
+    <img class="avatar" src="./imgs/avatar.png" alt="Imagen de avatar" onclick="document.getElementById('avatarInput').click();">
+</div>
+<div>
+    <label class="avatar-boton" for="avatar">SUBIR IMAGEN</label>
+    <input id="avatarInput" class="avatar-input" type="file" name="avatar" style="display:none;"/>
+</div>
             </div>
         </div>
 
