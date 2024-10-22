@@ -4,6 +4,7 @@
  */
 package prueba;
 
+import fachada.FachadaAccesoDatos;
 import jpaControllers.EstadoJpaController;
 import jpaControllers.MunicipioJpaController;
 import jpaControllers.UsuarioJpaController;
@@ -30,6 +31,10 @@ public class Prueba {
         UsuarioJpaController usuarioDao = new UsuarioJpaController(emf);
         UsuarioNormalJpaController usuarioNormalDao = new UsuarioNormalJpaController(emf);
         
+        FachadaAccesoDatos fad = new FachadaAccesoDatos();
+        
+        
+        
         
 //        Estado estado = new Estado("Sonora");
         
@@ -42,7 +47,9 @@ public class Prueba {
         
         UsuarioNormal usuarioNormal = new UsuarioNormal("Jorge Perez", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
         
-        usuarioNormalDao.create(usuarioNormal);
+        fad.crearUsuarioNormal(usuarioNormal);
+        
+//        usuarioNormalDao.create(usuarioNormal);
         
 //        usuarioDao.create(usuario);
         
