@@ -4,10 +4,21 @@
  */
 package modelo;
 
+import java.util.Date;
+import javax.persistence.Entity;
+
 /**
  *
  * @author Hector
  */
-public class UsuarioNormal {
+@Entity
+public class UsuarioNormal extends Usuario {
+
+    public UsuarioNormal() {
+    }
+
+    public UsuarioNormal(String nombreCompleto, String correo, String contrasenia, String telefono, String avatar, String ciudad, Date fechaNacimiento, String genero, Municipio municipio) {
+        super(nombreCompleto, correo, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, municipio);
+    }
     
 }

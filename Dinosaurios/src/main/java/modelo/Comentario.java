@@ -4,27 +4,80 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Comentario {
+public class Comentario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaHora;
     private String contenido;
 
     // Relación con Post y Usuario
     @ManyToOne
     @JoinColumn(name = "post_id")
-    private Post post;
+    private PostComun postComun;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
+    private UsuarioNormal usuarioNormal;
+
+    public Comentario() {
+    }
+
+    public Comentario(Date fechaHora, String contenido, PostComun postComun, UsuarioNormal usuarioNormal) {
+        this.fechaHora = fechaHora;
+        this.contenido = contenido;
+        this.postComun = postComun;
+        this.usuarioNormal = usuarioNormal;
+    }
 
     // Getters y setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getFechaHora() {
+        return fechaHora;
+    }
+
+    public void setFechaHora(Date fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public PostComun getPost() {
+        return postComun;
+    }
+
+    public void setPost(PostComun postComun) {
+        this.postComun = postComun;
+    }
+
+    public UsuarioNormal getUsuario() {
+        return usuarioNormal;
+    }
+
+    public void setUsuario(UsuarioNormal usuarioNormal) {
+        this.usuarioNormal = usuarioNormal;
+    }
+    
 }
