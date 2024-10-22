@@ -6,7 +6,7 @@ Este proyecto se centra en el tema de **Dinosaurios**, donde hemos desarrollado 
 
 - **Marlon Alejandro Canché Sastré** - ID: 233219
 - **José Pablo Páez López** - ID: 216711
-- **Héctor Andrés Lagarda Alcántar** - ID: 204733
+- **Héctor Andrés Lagarda Alcántarr** - ID: 204733
 
 ## Enlace al prototipo en Figma
 
