@@ -43,9 +43,9 @@ public class Prueba {
         
         Date fecha = new Date();
         
-        Usuario usuario = new Usuario("Jorge Perez", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
+        Usuario usuario = new Usuario("Jorge Perez", "jorgito", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
         
-        UsuarioNormal usuarioNormal = new UsuarioNormal("Jorge Perez", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
+        UsuarioNormal usuarioNormal = new UsuarioNormal("Jorge Perez", "jorgito", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
         
         fad.crearUsuarioNormal(usuarioNormal);
         

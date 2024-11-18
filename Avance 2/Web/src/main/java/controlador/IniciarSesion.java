@@ -52,7 +52,7 @@ public class IniciarSesion extends HttpServlet {
             throws ServletException, IOException {
         
         // Se obtienen las credenciales ingresadas por el usuario
-        String email = request.getParameter("email");
+        String username = request.getParameter("usuario");
         String password = request.getParameter("contrasena");
         
         // Se verifica la coincidencia con credenciales de la base de datos
@@ -62,19 +62,22 @@ public class IniciarSesion extends HttpServlet {
         
         List<Usuario> usersDB = fad.obtenerUsuarios();
         
+        boolean autenticado = false;
+        
         for (Usuario usuario: usersDB) {
-            if (email.equals(usuario.getCorreo())) {
-                
+            if (username.equals(usuario.getNombreUsuario()) && password.equals(usuario.getContrasenia())) {
+                autenticado = true;
+                break;
             }
         }
         
-//        if ("admin".equals(username) && "12345".equals(password)) {
-//            HttpSession sesion = request.getSession();
-//            sesion.setAttribute("usuario", username);
-//            response.sendRedirect(request.getContextPath() + "/home.jsp");
-//        } else {
-//            response.sendRedirect(request.getContextPath() + "/index.jsp?error=true");
-//        }
+        if (autenticado) {
+            HttpSession sesion = request.getSession();
+            sesion.setAttribute("usuario", username);
+            response.sendRedirect(request.getContextPath() + "/home.jsp");
+        } else {
+            response.sendRedirect(request.getContextPath() + "/index.jsp?error=true");
+        }
     }
 
     /**

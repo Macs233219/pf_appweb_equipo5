@@ -18,6 +18,7 @@ public class Usuario implements Serializable {
     private Long id;
 
     private String nombreCompleto;
+    private String nombreUsuario;
     private String correo;
     private String contrasenia;
     private String telefono;
@@ -35,8 +36,9 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(String nombreCompleto, String correo, String contrasenia, String telefono, String avatar, String ciudad, Date fechaNacimiento, String genero, Municipio municipio) {
+    public Usuario(String nombreCompleto, String nombreUsuario, String correo, String contrasenia, String telefono, String avatar, String ciudad, Date fechaNacimiento, String genero, Municipio municipio) {
         this.nombreCompleto = nombreCompleto;
+        this.nombreUsuario = nombreUsuario;
         this.correo = correo;
         this.contrasenia = contrasenia;
         this.telefono = telefono;
@@ -63,6 +65,14 @@ public class Usuario implements Serializable {
 
     public void setNombreCompleto(String nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getCorreo() {

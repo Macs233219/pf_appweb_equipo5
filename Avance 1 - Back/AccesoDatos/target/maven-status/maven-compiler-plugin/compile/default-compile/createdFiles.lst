@@ -21,13 +21,13 @@ jpaControllers\UsuarioAdministradorJpaController.class
 dao\PostAncladoDAO.class
 jpaControllers\ComentarioJpaController.class
 dao\ComentarioDAO.class
-jpaControllers\exceptions\PreexistingEntityException.class
 prueba\Prueba.class
 dao\interfaces\IUsuarioAdministradorDAO.class
 dao\MunicipioDAO.class
 dao\PostComunDAO.class
+controladoresJpa\exceptions\IllegalOrphanException.class
 dao\interfaces\IUsuarioDAO.class
-jpaControllers\exceptions\IllegalOrphanException.class
+controladoresJpa\exceptions\PreexistingEntityException.class
 dao\interfaces\IPostComunDAO.class
 dao\UsuarioNormalDAO.class
 dao\EstadoDAO.class

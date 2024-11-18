@@ -12,8 +12,8 @@ public class UsuarioAdministrador extends Usuario {
     public UsuarioAdministrador() {
     }
 
-    public UsuarioAdministrador(String nombreCompleto, String correo, String contrasenia, String telefono, String avatar, String ciudad, Date fechaNacimiento, String genero, Municipio municipio) {
-        super(nombreCompleto, correo, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, municipio);
+    public UsuarioAdministrador(String nombreCompleto, String nombreUusario, String correo, String contrasenia, String telefono, String avatar, String ciudad, Date fechaNacimiento, String genero, Municipio municipio) {
+        super(nombreCompleto, nombreUusario, correo, contrasenia, telefono, avatar, ciudad, fechaNacimiento, genero, municipio);
     }
     
 }
