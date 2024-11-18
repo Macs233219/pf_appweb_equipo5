@@ -23,6 +23,16 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>Dominio</groupId>
+            <artifactId>Dominio</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>AccesoDatos</groupId>
+            <artifactId>AccesoDatos</artifactId>
+            <version>1</version>
+        </dependency>
     </dependencies>
     
      <build>
