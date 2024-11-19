@@ -8,6 +8,10 @@
         <servlet-name>VerPublicacion</servlet-name>
         <servlet-class>controlador.VerPublicacion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FormularioRegistro</servlet-name>
+        <servlet-class>controlador.FormularioRegistro</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>VerPublicacion</servlet-name>
         <url-pattern>/VerPublicacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormularioRegistro</servlet-name>
+        <url-pattern>/FormularioRegistro</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

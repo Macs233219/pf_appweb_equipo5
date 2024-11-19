@@ -10,6 +10,7 @@ import jpaControllers.MunicipioJpaController;
 import jpaControllers.UsuarioJpaController;
 import jpaControllers.UsuarioNormalJpaController;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import modelo.Comentario;
@@ -29,10 +30,10 @@ public class Prueba {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("BlogPU");
         
-        EstadoJpaController estadoDao = new EstadoJpaController(emf);
-        MunicipioJpaController municipioDao = new MunicipioJpaController(emf);
-        UsuarioJpaController usuarioDao = new UsuarioJpaController(emf);
-        UsuarioNormalJpaController usuarioNormalDao = new UsuarioNormalJpaController(emf);
+//        EstadoJpaController estadoDao = new EstadoJpaController(emf);
+//        MunicipioJpaController municipioDao = new MunicipioJpaController(emf);
+//        UsuarioJpaController usuarioDao = new UsuarioJpaController(emf);
+//        UsuarioNormalJpaController usuarioNormalDao = new UsuarioNormalJpaController(emf);
         
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
         
@@ -77,9 +78,26 @@ public class Prueba {
 //        PostComun postComun = fad.obtenerPostComunPorId(1L);
 //        
 //        fad.crearComentario(new Comentario(fecha, "Me gusta este post!", postComun, usuarioNormal));
+
+//      ----------------
+//      CREAR ESTADO
+//      ----------------
+
+//        fad.crearEstado(new Estado("Jalisco"));
         
-        
-        
+
+//      ----------------
+//      CREAR MUNICIPIO
+//      ----------------
+
+//        fad.crearMunicipio(new Municipio("Caborca", fad.obtenerEstadoPorId(1L)));
+
+
+        List<Municipio> municipios = fad.obtenerMunicipios();
+        for (Municipio municipio: municipios) {
+            System.out.println(municipio.getNombre());
+        }
+
     }
     
 }
