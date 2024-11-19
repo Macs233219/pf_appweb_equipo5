@@ -57,7 +57,6 @@ public class IniciarSesion extends HttpServlet {
         String password = request.getParameter("contrasena");
         
         // Se verifica la coincidencia con credenciales de la base de datos
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BlogPU");
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
         
         

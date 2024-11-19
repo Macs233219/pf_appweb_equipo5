@@ -12,6 +12,10 @@
         <servlet-name>FormularioRegistro</servlet-name>
         <servlet-class>controlador.FormularioRegistro</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Registrarse</servlet-name>
+        <servlet-class>controlador.Registrarse</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>FormularioRegistro</servlet-name>
         <url-pattern>/FormularioRegistro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Registrarse</servlet-name>
+        <url-pattern>/Registrarse</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

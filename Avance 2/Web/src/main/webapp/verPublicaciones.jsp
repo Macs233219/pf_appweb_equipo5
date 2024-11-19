@@ -67,7 +67,7 @@
         <!-- Paginación -->
         <div class="pagination">
             <i class="fas fa-chevron-left"></i>
-            <span>4</span>
+            <span>1</span>
             <i class="fas fa-chevron-right"></i>
         </div>
     </div>

@@ -21,7 +21,7 @@
             <a href="index.jsp"><img class="img-titulo" src="./imgs/logo-dinosaurio.png" alt="Logo de Dinosaurio"></a>
             <h1>REGISTRARSE</h1>
         </div>
-        <form action="iniciarSesion.html">
+        <form action="Registrarse" method="post">
             <div class="formulario">
                 <div columna>
                     <label for="nombres">NOMBRES</label>
@@ -65,9 +65,9 @@
                         <input type="radio" name="genero" value="femenino">
                         <label class="genero" for="femenino">FEMENINO</label>
                     </div>
-                    <label for="fecha">FECHA DE NACIMIENTO</label>
+                    <label for="fechaNacimiento">FECHA DE NACIMIENTO</label>
                     <div>
-                        <input type="date" required>
+                        <input type="date" name="fechaNacimiento" required>
                     </div>
                 </div>
 
