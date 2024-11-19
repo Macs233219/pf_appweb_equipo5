@@ -14,6 +14,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import modelo.Estado;
 import modelo.Municipio;
+import modelo.Post;
+import modelo.PostComun;
 import modelo.Usuario;
 import modelo.UsuarioNormal;
 
@@ -43,17 +45,27 @@ public class Prueba {
         
         Date fecha = new Date();
         
-        Usuario usuario = new Usuario("Jorge Perez", "jorgito", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
+//        Usuario usuario = new Usuario("Jorge Perez", "jorgito", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
         
-        UsuarioNormal usuarioNormal = new UsuarioNormal("Jorge Perez", "jorgito", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
-        
-        fad.crearUsuarioNormal(usuarioNormal);
+//        UsuarioNormal usuarioNormal = new UsuarioNormal("Pedro Torres", "pedrito", "ptorres@mail.com", "2345", "2222334455", "imagen.png", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
+//        
+//        fad.crearUsuarioNormal(usuarioNormal);
         
 //        usuarioNormalDao.create(usuarioNormal);
         
 //        usuarioDao.create(usuario);
         
 //        estadoDao.create(estado);
+
+//      ----------------
+//      CREAR POST COMUN
+//      ----------------
+
+        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(15L);
+        
+        PostComun postComun = new PostComun(usuarioNormal, null, fecha, "Publicacion #1", "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem", fecha);        
+
+        fad.crearPostComun(postComun);
         
         
         

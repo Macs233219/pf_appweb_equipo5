@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -62,19 +63,28 @@ public class IniciarSesion extends HttpServlet {
         
         List<Usuario> usersDB = fad.obtenerUsuarios();
         
+        Long id = 0L;
         boolean autenticado = false;
         
         for (Usuario usuario: usersDB) {
             if (username.equals(usuario.getNombreUsuario()) && password.equals(usuario.getContrasenia())) {
                 autenticado = true;
+                id = usuario.getId();
                 break;
             }
         }
         
         if (autenticado) {
             HttpSession sesion = request.getSession();
+            // se agrega el nombre de usuario y su valor identificador a la sesión
+            sesion.setAttribute("idUsuario", id);
             sesion.setAttribute("usuario", username);
-            response.sendRedirect(request.getContextPath() + "/home.jsp");
+            
+            request.setAttribute("listaPublicaciones", fad.obtenerPostsComunes());
+            
+//            response.sendRedirect(request.getContextPath() + "/verPublicaciones.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("verPublicaciones.jsp");
+            dispatcher.forward(request, response);
         } else {
             response.sendRedirect(request.getContextPath() + "/index.jsp?error=true");
         }
