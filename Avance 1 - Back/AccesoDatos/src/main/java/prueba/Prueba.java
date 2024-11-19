@@ -12,6 +12,7 @@ import jpaControllers.UsuarioNormalJpaController;
 import java.util.Date;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import modelo.Comentario;
 import modelo.Estado;
 import modelo.Municipio;
 import modelo.Post;
@@ -61,14 +62,21 @@ public class Prueba {
 //      CREAR POST COMUN
 //      ----------------
 
-        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(15L);
+//        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(15L);
+//        
+//        PostComun postComun = new PostComun(usuarioNormal, null, fecha, "Publicacion #1", "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem", fecha);        
+//
+//        fad.crearPostComun(postComun);
         
-        PostComun postComun = new PostComun(usuarioNormal, null, fecha, "Publicacion #1", "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem", fecha);        
+//      ----------------
+//      CREAR COMENTARIO
+//      ----------------
 
-        fad.crearPostComun(postComun);
-        
-        
-        
+//        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(14L);
+//        
+//        PostComun postComun = fad.obtenerPostComunPorId(1L);
+//        
+//        fad.crearComentario(new Comentario(fecha, "Me gusta este post!", postComun, usuarioNormal));
         
         
         
