@@ -5,7 +5,6 @@
 --%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Dinosaurios</title>
-    <link rel="stylesheet" href="./styles/verPublicacion.css"/>
+    <link rel="stylesheet" href="./styles/verPublicaciones.css"/>
 </head>
 <body>
     <div class="container">
@@ -47,7 +46,7 @@
                 </div>
                 <div class="post-info">
                   <div class="usuario"> 
-                    <span>Usuario #2</span>
+                    <span>${publicacion.usuario.nombreUsuario}</span>
                     <img  style="
                     width: 45px !important;
                     height: 45px !important;" src="imgs/avatar_2.png" alt="Tipos de Dinosaurios">
