@@ -32,6 +32,10 @@
         <servlet-name>Registrarse</servlet-name>
         <url-pattern>/Registrarse</url-pattern>
     </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errors/NotFound.jsp</location>
+    </error-page>
     <session-config>
         <session-timeout>
             30
