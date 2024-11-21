@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import encriptacion.PasswordEncryption;
 import fachada.FachadaAccesoDatos;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -54,7 +55,7 @@ public class Registrarse extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        // Se obtienen los datos del formulario
+        // OBTENER DATOS DEL FORMULARIO
         String nombres = request.getParameter("nombres");
         String correo = request.getParameter("correo");
         String usuario = request.getParameter("usuario");
@@ -67,6 +68,11 @@ public class Registrarse extends HttpServlet {
         String contrasena = request.getParameter("contrasena");
         String ciudad = request.getParameter("ciudad");
         
+        // ENCRIPTAR CONTRASENIA
+        String contrasenaEncriptada = PasswordEncryption.encryptPassword(contrasena);
+        
+        
+        // REGISTRAR USUARIO
         String nombreCompleto = nombres + " " + apellidos;
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -90,7 +96,7 @@ public class Registrarse extends HttpServlet {
             }
         }
         
-        fad.crearUsuarioNormal(new UsuarioNormal(nombreCompleto, usuario, correo, contrasena, telefono, "imagen.png", ciudad, fecha, genero, municipio));
+        fad.crearUsuarioNormal(new UsuarioNormal(nombreCompleto, usuario, correo, contrasenaEncriptada, telefono, "imagen.png", ciudad, fecha, genero, municipio));
         
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);

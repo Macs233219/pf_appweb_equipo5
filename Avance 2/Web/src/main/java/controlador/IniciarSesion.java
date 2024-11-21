@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import encriptacion.PasswordEncryption;
 import fachada.FachadaAccesoDatos;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -58,15 +59,16 @@ public class IniciarSesion extends HttpServlet {
         
         // Se verifica la coincidencia con credenciales de la base de datos
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
-        
-        
         List<Usuario> usersDB = fad.obtenerUsuarios();
+        
+        // ENCRIPTAR CONTRASENIA
+        String contrasenaEncriptada = PasswordEncryption.encryptPassword(password);
         
         Long id = 0L;
         boolean autenticado = false;
         
         for (Usuario usuario: usersDB) {
-            if (username.equals(usuario.getNombreUsuario()) && password.equals(usuario.getContrasenia())) {
+            if (username.equals(usuario.getNombreUsuario()) && contrasenaEncriptada.equals(usuario.getContrasenia())) {
                 autenticado = true;
                 id = usuario.getId();
                 break;
