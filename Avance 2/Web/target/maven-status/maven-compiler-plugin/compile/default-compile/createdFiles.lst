@@ -5,4 +5,5 @@ controlador\VerPublicacion.class
 com\dinosaurios\web\resources\JakartaEE8Resource.class
 controlador\IniciarSesion.class
 controlador\Registrarse.class
+controlador\VerPublicaciones.class
 controlador\FormularioRegistro.class

@@ -27,7 +27,7 @@
           </div>
           <div class="profile">
               <img src="imgs/avatar_1.png" alt="Perfil">
-              <span>Perfil</span>
+              <span>${usuario}</span>
           </div>
       </header>
       

@@ -32,6 +32,7 @@ public class FiltroAutenticacion implements Filter {
         "IniciarSesion",
         "Registrarse",
         "VerPublicacion",
+        "VerPublicaciones",
         "error.css",
         "iniciarSesion.css",
         "publicacion.css",

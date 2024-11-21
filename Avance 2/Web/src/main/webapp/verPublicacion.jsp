@@ -22,13 +22,13 @@
   <!-- Encabezado -->
   <header class="barra-navegacion">
     <div class="custom-logo2">
-      <a href="inicio.html"><img src="imgs/logo-dinosaurio.png" alt="Logo personalizado"></a>
+      <a href="VerPublicaciones"><img src="imgs/logo-dinosaurio.png" alt="Logo personalizado"></a>
     </div>
     <div class="search-bar">
     </div>
     <div class="profile">
       <img src="imgs/avatar_1.png" alt="Perfil">
-      <span>Perfil</span>
+      <span>${usuario}</span>
     </div>
   </header>
 

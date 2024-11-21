@@ -5,20 +5,21 @@
 package prueba;
 
 import fachada.FachadaAccesoDatos;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import jpaControllers.EstadoJpaController;
 import jpaControllers.MunicipioJpaController;
 import jpaControllers.UsuarioJpaController;
 import jpaControllers.UsuarioNormalJpaController;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import modelo.Comentario;
 import modelo.Estado;
 import modelo.Municipio;
 import modelo.Post;
 import modelo.PostComun;
 import modelo.Usuario;
+import modelo.UsuarioAdministrador;
 import modelo.UsuarioNormal;
 
 /**
@@ -28,7 +29,7 @@ import modelo.UsuarioNormal;
 public class Prueba {
     
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BlogPU");
+//        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BlogPU");
         
 //        EstadoJpaController estadoDao = new EstadoJpaController(emf);
 //        MunicipioJpaController municipioDao = new MunicipioJpaController(emf);
@@ -36,36 +37,67 @@ public class Prueba {
 //        UsuarioNormalJpaController usuarioNormalDao = new UsuarioNormalJpaController(emf);
         
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
-        
-        
-        
-        
-//        Estado estado = new Estado("Sonora");
-        
-        
-//        municipioDao.create(new Municipio("Cajeme", estadoDao.findEstado(1L)));
-        
         Date fecha = new Date();
         
-//        Usuario usuario = new Usuario("Jorge Perez", "jorgito", "jperez@mail.com", "1234", "1122334455", "imagen.ong", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
+
+
+//      ----------------
+//      CREAR ESTADO
+//      ----------------
+
+//        fad.crearEstado(new Estado("Sonora"));
+//        fad.crearEstado(new Estado("Jalisco"));
+//        fad.crearEstado(new Estado("Chiapas"));
+//        fad.crearEstado(new Estado("Guerrero"));
         
-//        UsuarioNormal usuarioNormal = new UsuarioNormal("Pedro Torres", "pedrito", "ptorres@mail.com", "2345", "2222334455", "imagen.png", "Obregón", fecha, "mascuilino", municipioDao.findMunicipio(1L));
-//        
-//        fad.crearUsuarioNormal(usuarioNormal);
-        
-//        usuarioNormalDao.create(usuarioNormal);
-        
-//        usuarioDao.create(usuario);
-        
-//        estadoDao.create(estado);
+
+//      ----------------
+//      CREAR MUNICIPIO
+//      ----------------
+
+//        fad.crearMunicipio(new Municipio("Cajeme", fad.obtenerEstadoPorId(1L)));
+//        fad.crearMunicipio(new Municipio("Hermosillo", fad.obtenerEstadoPorId(1L)));
+//        fad.crearMunicipio(new Municipio("Sauaripa", fad.obtenerEstadoPorId(1L)));
+
+
+//        List<Municipio> municipios = fad.obtenerMunicipios();
+//        for (Municipio municipio: municipios) {
+//            System.out.println(municipio.getNombre());
+//        }
+
+//      ----------------
+//      CREAR USUARIO
+//      ----------------
+
+//        String contraseniaEncriptada = "root";
+//
+//        try {
+//            // Crear la instancia de MessageDigest con el algoritmo SHA-256
+//            MessageDigest md = MessageDigest.getInstance("SHA-256");
+//
+//            // Aplicar el algoritmo de hash a la contraseña
+//            byte[] hashedPassword = md.digest(contraseniaEncriptada.getBytes());
+//
+//            // Convertir el hash en una cadena hexadecimal
+//            StringBuilder sb = new StringBuilder();
+//            for (byte b : hashedPassword) {
+//                sb.append(String.format("%02x", b));
+//            }
+//            contraseniaEncriptada = sb.toString();
+//        } catch (NoSuchAlgorithmException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        UsuarioAdministrador usuarioAdministrador = new UsuarioAdministrador("Pedro Torres", "admin", "admin@mail.com", contraseniaEncriptada, "2222334455", "imagen.png", "Obregón", fecha, "mascuilino", fad.obtenerMunicipioPorId(1L));
+//        fad.crearUsuarioAdministrador(usuarioAdministrador);
 
 //      ----------------
 //      CREAR POST COMUN
 //      ----------------
 
-//        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(15L);
+//        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(3L);
 //        
-//        PostComun postComun = new PostComun(usuarioNormal, null, fecha, "Publicacion #1", "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem", fecha);        
+//        PostComun postComun = new PostComun(usuarioNormal, null, fecha, "Dinosaurios Favoritos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", fecha);        
 //
 //        fad.crearPostComun(postComun);
         
@@ -73,30 +105,11 @@ public class Prueba {
 //      CREAR COMENTARIO
 //      ----------------
 
-//        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(14L);
+//        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(2L);
 //        
-//        PostComun postComun = fad.obtenerPostComunPorId(1L);
+//        PostComun postComun = fad.obtenerPostComunPorId(3L);
 //        
-//        fad.crearComentario(new Comentario(fecha, "Me gusta este post!", postComun, usuarioNormal));
-
-//      ----------------
-//      CREAR ESTADO
-//      ----------------
-
-//        fad.crearEstado(new Estado("Jalisco"));
-        
-
-//      ----------------
-//      CREAR MUNICIPIO
-//      ----------------
-
-//        fad.crearMunicipio(new Municipio("Caborca", fad.obtenerEstadoPorId(1L)));
-
-
-        List<Municipio> municipios = fad.obtenerMunicipios();
-        for (Municipio municipio: municipios) {
-            System.out.println(municipio.getNombre());
-        }
+//        fad.crearComentario(new Comentario(fecha, "Mi dinosaurio favorito es el cuello largo.", postComun, usuarioNormal));
 
     }
     
