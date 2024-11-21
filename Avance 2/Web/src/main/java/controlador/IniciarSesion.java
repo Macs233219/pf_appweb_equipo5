@@ -53,20 +53,22 @@ public class IniciarSesion extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        // Se obtienen las credenciales ingresadas por el usuario
+        // OBTENER CREDENCIALES INGRESADAS
         String username = request.getParameter("usuario");
         String password = request.getParameter("contrasena");
         
-        // Se verifica la coincidencia con credenciales de la base de datos
+        // CONEXIÓN A BASE DE DATOS
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
         List<Usuario> usersDB = fad.obtenerUsuarios();
         
         // ENCRIPTAR CONTRASENIA
         String contrasenaEncriptada = PasswordEncryption.encryptPassword(password);
         
+        
+        
+        // AUTENTICAR
         Long id = 0L;
         boolean autenticado = false;
-        
         for (Usuario usuario: usersDB) {
             if (username.equals(usuario.getNombreUsuario()) && contrasenaEncriptada.equals(usuario.getContrasenia())) {
                 autenticado = true;
@@ -75,6 +77,9 @@ public class IniciarSesion extends HttpServlet {
             }
         }
         
+        
+        
+        // DIRIGIR A PÁGINAS
         if (autenticado) {
             HttpSession sesion = request.getSession();
             // se agrega el nombre de usuario y su valor identificador a la sesión
@@ -82,8 +87,6 @@ public class IniciarSesion extends HttpServlet {
             sesion.setAttribute("usuario", username);
             
             request.setAttribute("listaPublicaciones", fad.obtenerPostsComunes());
-            
-//            response.sendRedirect(request.getContextPath() + "/verPublicaciones.jsp");
             RequestDispatcher dispatcher = request.getRequestDispatcher("verPublicaciones.jsp");
             dispatcher.forward(request, response);
         } else {

@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Municipio;
+import modelo.Usuario;
 import modelo.UsuarioNormal;
 
 /**
@@ -59,7 +60,6 @@ public class Registrarse extends HttpServlet {
         String nombres = request.getParameter("nombres");
         String correo = request.getParameter("correo");
         String usuario = request.getParameter("usuario");
-//        String estado = request.getParameter("estado");
         String municipioString = request.getParameter("municipio");
         String genero = request.getParameter("genero");
         String fechaNacimiento = request.getParameter("fechaNacimiento");
@@ -72,32 +72,53 @@ public class Registrarse extends HttpServlet {
         String contrasenaEncriptada = PasswordEncryption.encryptPassword(contrasena);
         
         
-        // REGISTRAR USUARIO
+        // FORMATO PARA FECHA Y NOMBRE COMPLETO
         String nombreCompleto = nombres + " " + apellidos;
-        
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        
         Date fecha = null;
-        
         try {
             fecha = sdf.parse(fechaNacimiento);
         } catch(ParseException e) {
             e.printStackTrace();
         }
         
+        // CONEXIÓN A BD
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
         
+        // BANDERA DE REGISTRO
+        boolean registrar = true;
+        
+        // VERIFICAR NOMBRE DE USUARIO NO REPETIDO
+        List<Usuario> usuariosBD = fad.obtenerUsuarios();
+        for (Usuario usuarioBD: usuariosBD) {
+            if (usuario.equals(usuarioBD.getNombreUsuario())) {
+                registrar = false;
+                System.out.println("NOMBRE DE USUARIO REPETIDO");
+            }
+            
+            if (correo.equals(usuarioBD.getCorreo())) {
+                registrar = false;
+                System.out.println("CORREO REPETIDO");
+            }
+        }
+        
+        
+        // IDENTIFICAR MUNICIPIO
         List<Municipio> listaMunicipios = fad.obtenerMunicipios();
         Municipio municipio = null;
-        
         for (Municipio elementoMunicipio: listaMunicipios) {
             if (municipioString.equals(elementoMunicipio.getNombre())) {
                 municipio = elementoMunicipio;
             }
         }
         
-        fad.crearUsuarioNormal(new UsuarioNormal(nombreCompleto, usuario, correo, contrasenaEncriptada, telefono, "imagen.png", ciudad, fecha, genero, municipio));
+        // CREAR USUARIO
+        if (registrar) {
+            fad.crearUsuarioNormal(new UsuarioNormal(nombreCompleto, usuario, correo, contrasenaEncriptada, telefono, "imagen.png", ciudad, fecha, genero, municipio));
+        }
         
+        
+        // DIRIGIR A PÁGINA DE INICIO
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
         
