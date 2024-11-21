@@ -22,7 +22,7 @@
   <!-- Encabezado -->
   <header class="barra-navegacion">
     <div class="custom-logo2">
-      <a href="VerPublicaciones"><img src="imgs/logo-dinosaurio.png" alt="Logo personalizado"></a>
+      <a href="VolverPublicaciones"><img src="imgs/logo-dinosaurio.png" alt="Logo personalizado"></a>
     </div>
     <div class="search-bar">
     </div>

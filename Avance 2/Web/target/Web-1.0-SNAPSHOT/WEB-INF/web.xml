@@ -26,7 +26,7 @@
     </servlet>
     <servlet>
         <servlet-name>VerPublicaciones</servlet-name>
-        <servlet-class>controlador.VerPublicaciones</servlet-class>
+        <servlet-class>controlador.VolverPublicaciones</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>

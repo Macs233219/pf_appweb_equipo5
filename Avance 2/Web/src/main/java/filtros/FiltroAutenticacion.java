@@ -27,12 +27,11 @@ public class FiltroAutenticacion implements Filter {
     private static final boolean debug = true;
     private static final String[] urlPublicas = {
         "registrarse.jsp", 
-        "index.jsp", 
+        "index.jsp",
         "FormularioRegistro", 
         "IniciarSesion",
         "Registrarse",
         "VerPublicacion",
-        "VerPublicaciones",
         "error.css",
         "iniciarSesion.css",
         "publicacion.css",
@@ -104,7 +103,7 @@ public class FiltroAutenticacion implements Filter {
     // verifica que haya una sesion activa y que el usuario se encuentre autenticado
     private boolean estaLogueado(HttpServletRequest httpRequest) {
         HttpSession sesion = httpRequest.getSession(false);
-        boolean logueado = (sesion != null && sesion.getAttribute("usuario") != null);
+        boolean logueado = (sesion != null && sesion.getAttribute("esAdmin") != null);
         return logueado;
     }
     

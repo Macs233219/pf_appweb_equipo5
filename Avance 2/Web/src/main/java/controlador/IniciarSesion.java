@@ -74,15 +74,28 @@ public class IniciarSesion extends HttpServlet {
             }
         }
         
+        boolean esAdmin = id == 4;
         
+        HttpSession sesion = request.getSession();
         
-        // DIRIGIR A PÁGINAS
         if (autenticado) {
-            HttpSession sesion = request.getSession();
             // se agrega el nombre de usuario y su valor identificador a la sesión
             sesion.setAttribute("idUsuario", id);
             sesion.setAttribute("usuario", username);
-            
+        }
+        
+        if (esAdmin) {
+            sesion.setAttribute("esAdmin", "admin");
+        }
+        
+        
+        // DIRIGIR A PÁGINAS
+        if (autenticado && esAdmin) {
+            request.setAttribute("listaPublicaciones", fad.obtenerPostsComunes());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("administrarPublicaciones.jsp");
+            dispatcher.forward(request, response);
+        } else if (autenticado && !esAdmin) {
+            sesion.setAttribute("esAdmin", null);
             request.setAttribute("listaPublicaciones", fad.obtenerPostsComunes());
             RequestDispatcher dispatcher = request.getRequestDispatcher("verPublicaciones.jsp");
             dispatcher.forward(request, response);
