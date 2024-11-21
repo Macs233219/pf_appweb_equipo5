@@ -25,7 +25,19 @@ import javax.servlet.http.HttpSession;
 public class FiltroAutenticacion implements Filter {
     
     private static final boolean debug = true;
-    private static final String[] urlPublicas = {"registrarse.jsp", "index.jsp", "FormularioRegistro", "IniciarSesion"};
+    private static final String[] urlPublicas = {
+        "registrarse.jsp", 
+        "index.jsp", 
+        "FormularioRegistro", 
+        "IniciarSesion",
+        "Registrarse",
+        "VerPublicacion",
+        "error.css",
+        "iniciarSesion.css",
+        "publicacion.css",
+        "registrarse.css",
+        "verPublicaciones.css"
+    };
 
     // The filter configuration object we are associated with.  If
     // this value is null, this filter instance is not currently
