@@ -175,7 +175,7 @@ public class FachadaAccesoDatos implements IFachadaAccesoDatos {
 
     @Override
     public void eliminarPostComun(Long id) {
-        this.postAncladoDAO.eliminarPostAnclado(id);
+        this.postComunDAO.eliminarPostComun(id);
     }
 
     @Override
