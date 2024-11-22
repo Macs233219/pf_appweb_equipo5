@@ -100,14 +100,14 @@ public class Prueba {
 //        PostComun postComun = new PostComun(usuarioNormal, null, fecha, "Dinosaurios Favoritos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", fecha);        
 //
 //        fad.crearPostComun(postComun);
-        
+//        
 //      ----------------
 //      CREAR COMENTARIO
 //      ----------------
 
 //        UsuarioNormal usuarioNormal = fad.obtenerUsuarioNormalPorId(2L);
 //        
-//        PostComun postComun = fad.obtenerPostComunPorId(3L);
+//        PostComun postComun = fad.obtenerPostComunPorId(12L);
 //        
 //        fad.crearComentario(new Comentario(fecha, "Mi dinosaurio favorito es el cuello largo.", postComun, usuarioNormal));
 
