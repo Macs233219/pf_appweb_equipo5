@@ -91,6 +91,7 @@ public class IniciarSesion extends HttpServlet {
         
         // DIRIGIR A PÁGINAS
         if (autenticado && esAdmin) {
+            request.setAttribute("publicacionesFijadas", fad.obtenerPostAnclados());
             request.setAttribute("listaPublicaciones", fad.obtenerPostsComunes());
             RequestDispatcher dispatcher = request.getRequestDispatcher("administrarPublicaciones.jsp");
             dispatcher.forward(request, response);

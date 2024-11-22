@@ -1,4 +1,5 @@
 encriptacion\PasswordEncryption.class
+filtros\FiltroAutenticacion.class
 controlador\VolverPublicaciones.class
 com\dinosaurios\web\JakartaRestConfiguration.class
 controlador\VerPublicacion.class
