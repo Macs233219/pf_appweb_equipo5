@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: "Inter";
+}
+
+body{
+    background-color: #AED085;
+    margin: 3rem 7rem;
+}
+
+.img-titulo{
+    width: 128px;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+.registrarse{
+    text-align: center;
+}
+
+form{
+    justify-content: center;
+}
+
+label{
+    font-weight: 700;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    gap: 40px
+}
+
+.columna{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-boton{
+    width: 40px;
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+input{
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    border: 0;  
+}
+
+.selector{
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+
+}
+
+input[type="date"]{
+    cursor: text;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    font-size: 1rem;
+    color: white;
+    background-color: #515D41;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+input[type="file"]{
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.genero{
+    font-weight: 400;
+}
+
+.avatar{
+    width: 172px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.avatar-input{
+    display: none;
+}
+
+.avatar-boton{
+    color: black;
+    font-weight: 400;
+    font-size: .9rem;
+    background-color: #96A97C;
+    border: 2px solid #62775B;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.boton-registrarse{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.avatar-boton:hover {
+    background-color: #708f47;
+    color: black;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #708f47;
+    color: black;
+    cursor: pointer;
+}
