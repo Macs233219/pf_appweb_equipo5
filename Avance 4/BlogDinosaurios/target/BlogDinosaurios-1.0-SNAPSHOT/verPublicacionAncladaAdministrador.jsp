@@ -42,10 +42,6 @@
                 <p>
                     ${publicacion.contenido}
                 </p>
-
-                <div class="imagen-publicacion">
-                    <img src="imgs/imagen_publicacion.jpg" alt="Imagen de publicación" width="500" height="500" />
-                </div>
             </div>
         </div>
                 

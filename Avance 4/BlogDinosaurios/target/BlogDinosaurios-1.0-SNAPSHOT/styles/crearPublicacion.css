@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: Arial, sans-serif;
+    margin: 4px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #AED085;
+    font-weight: 500;
+    padding: .5rem;
+    margin: auto;
+    border-radius: .5rem;
+}
+
+.cuerpo{
+    background-color: white;
+    margin: 3rem 5rem;
+    padding: .3rem;
+    border-radius: .5rem;
+    min-width: 1000px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    padding: .3rem;
+    border: 1px solid #B4B1B1;
+    border-radius: .3rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.linea{
+    margin: 5px;
+    background-color: #B4B1B1;
+    height: 1px;
+}
+
+.input-titulo-etiqueta{
+    width: 98%;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+}
+
+.contenedor-titulo-etiqueta {
+    flex: 70%;
+}
+
+.contenedor-config {
+    margin-top: 20px;
+    flex: 30%;
+}
+
+.label-config {
+    font-weight: 300;
+}
+
+textarea {
+    background-color: white;
+    padding: .3rem;
+    border: 1px solid #B4B1B1;
+    border-radius: .3rem;
+    height: 380px;
+    width: 98%;
+}
+
+input[type="file"] {
+    background-color: white;
+    padding: .3rem;
+    border: 1px solid #B4B1B1;
+    border-radius: .3rem;
+    height: 60px;
+    width: 98%;
+}
+
+.boton {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.verde-oscuro {
+    color: white;
+    background-color: #515D41;
+}
+
+.verde-claro {
+    color: black;
+    background-color: #96A97C;
+}
+
+.boton:hover {
+    background-color: #708f47;
+    cursor: pointer;
+}
+
+
+.barra-navegacion {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    background-color: #96A97C;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Estilo del ícono de búsqueda */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.custom-logo2 img {
+    width: 60px;
+    height: 60px;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    background-color: #515D41;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+span {
+    color: white;
+}

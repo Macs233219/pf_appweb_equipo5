@@ -30,8 +30,7 @@
               <span>${usuario}</span>
           </div>
       </header>
-      
-      
+          
         <!-- Lista de posts anclados -->
             <div class="pinned-posts">
                 <c:forEach var="publicacionAnclada" items="${publicacionesFijadas}">
@@ -57,6 +56,8 @@
             </div>
           
         <!-- Lista de publicaciones -->
+        <a href="crearPublicacion.jsp"><input type="button" value="Crear publicación" class="boton-crear"></a>
+        
         <div class="post-list">
             
             <c:forEach var="publicacion" items="${listaPublicaciones}">
@@ -86,9 +87,9 @@
         
         <!-- Paginación -->
         <div class="pagination">
-            <i class="fas fa-chevron-left"></i>
-            <span>1</span>
-            <i class="fas fa-chevron-right"></i>
+                <span><</span>
+                <span>1</span>
+               <span>></span>
         </div>
     </div>
 </body>

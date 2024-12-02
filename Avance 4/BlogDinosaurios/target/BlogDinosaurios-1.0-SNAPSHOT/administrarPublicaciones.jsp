@@ -92,9 +92,9 @@
 
             <!-- Paginación -->
             <div class="pagination">
-                <i class="fas fa-chevron-left"></i>
-                <span>4</span>
-                <i class="fas fa-chevron-right"></i>
+                <span><</span>
+                <span>1</span>
+               <span>></span>
             </div>
         </div>
     </body>

@@ -55,7 +55,6 @@ input[type="password"] {
 
 .boton:hover {
     background-color: #708f47;
-    color: black;
     cursor: pointer;
 }
 

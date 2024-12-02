@@ -283,3 +283,20 @@ h3:hover {
     transform: rotate(30deg); /* Rotación para darle estilo */
     cursor: pointer;
 }
+
+.boton-crear {
+    font-size: 1.2rem;
+    background-color: #515D41;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 99%;
+    cursor: pointer;
+}
+
+.boton-crear:hover {
+    background-color: #708f47;
+    cursor: pointer;
+}

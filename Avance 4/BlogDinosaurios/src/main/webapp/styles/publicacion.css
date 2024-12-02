@@ -42,20 +42,21 @@ body {
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .boton:hover {
     background-color: #708f47;
-    color: black;
 }
 
 textarea {
     border: none;
     resize: none;
+    padding: 10px;
+}
+
+textarea:hover {
+    border: 1px solid black;
 }
 
 
