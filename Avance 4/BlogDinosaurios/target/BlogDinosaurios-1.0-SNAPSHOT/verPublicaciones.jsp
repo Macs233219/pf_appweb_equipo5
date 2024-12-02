@@ -61,7 +61,7 @@
             
             <c:forEach var="publicacion" items="${listaPublicaciones}">
                 <div class="post-item">
-                    <img class="foto-post" src="${pageContext.request.contextPath}/portadas/${publicacionAnclada.portada}"  alt="Tipos de Dinosaurios">
+                    <img class="foto-post" src="${pageContext.request.contextPath}/portadas/${publicacion.portada}"  alt="Tipos de Dinosaurios">
                 <div class="post-content">
                     <a href="VerPublicacion?id=${publicacion.id}"><h3>${publicacion.titulo}</h3></a>
                     <p class="contenido-publicacion">${publicacion.contenido}</p>

@@ -73,7 +73,7 @@ public class Registrarse extends HttpServlet {
         String ciudad = request.getParameter("ciudad");
 
         // Ruta para guardar imágenes
-        String uploadPath = "C:\\Users\\Jose Pablo\\Desktop\\BlogDinosaurios\\src\\main\\webapp\\avatares";
+        String uploadPath = "C:\\Users\\Jose Pablo\\Desktop\\Avance 4\\BlogDinosaurios\\src\\main\\webapp\\avatares";
         File uploadDir = new File(uploadPath);
         if (!uploadDir.exists()) {
             uploadDir.mkdir();

@@ -57,8 +57,7 @@ public class VolverPublicaciones extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-
+        System.out.println("AAAAAQUIR SEOTOOOOOOOOOOOOOO");
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
         request.setAttribute("publicacionesFijadas", fad.obtenerPostAnclados());
         request.setAttribute("listaPublicaciones", fad.obtenerPostsComunes());
