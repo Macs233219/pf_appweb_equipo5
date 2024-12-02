@@ -298,3 +298,15 @@ h3:hover {
     color: white;
     cursor: pointer;
 }
+
+.container-anclar:hover {
+    background-color: #357ABD;
+}
+
+.container-eliminar:hover {
+    background-color: #C25C5C;
+}
+.container-desanclar:hover {
+    background-color: #5A636B;
+}
+
