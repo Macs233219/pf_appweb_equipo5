@@ -38,7 +38,7 @@
                         <i class="fas fa-thumbtack pinned-icon"></i> <!-- Icono de pin -->
                         <img  class="foto-post"  src = "${pageContext.request.contextPath}/portadas/${publicacionAnclada.portada}" alt="Dinosaurios Voladores">
                         <div class="post-content">
-                            <a href="VerPublicacionAnclada?id=${publicacionAnclada.id}"><h3>${publicacionAnclada.titulo}</h3></a>
+                            <a href="VerPublicacionAncladaAdministrador?id=${publicacionAnclada.id}"><h3>${publicacionAnclada.titulo}</h3></a>
                             <p class="contenido-publicacion">${publicacionAnclada.contenido}</p>
                             <span class="date">${publicacionAnclada.fechaHoraCreacion}</span>
                         </div>
@@ -65,7 +65,7 @@
                     <div class="post-item">
                         <img class="foto-post" src="${pageContext.request.contextPath}/portadas/${publicacion.portada}" alt="Tipos de Dinosaurios">
                         <div class="post-content">
-                            <a href="VerPublicacion?id=${publicacion.id}"><h3>${publicacion.titulo}</h3></a>
+                            <a href="VerPublicacionAdministrador?id=${publicacion.id}"><h3>${publicacion.titulo}</h3></a>
                             <p class="contenido-publicacion">${publicacion.contenido}</p>
                             <span class="date">${publicacion.fechaHoraCreacion}</span>
                         </div>

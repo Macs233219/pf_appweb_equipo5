@@ -2,6 +2,8 @@ filtros\FiltroAutenticacion.class
 controlador\AnclarPublicacion.class
 controlador\VolverPublicaciones.class
 controlador\VerPublicacion.class
+controlador\VerPublicacionAdministrador.class
+controlador\VolverPublicacionesAdministrador.class
 controlador\DesanclarPublicacion.class
 controlador\FormularioRegistro.class
 controlador\VerPublicacionAnclada.class
@@ -10,4 +12,5 @@ com\mycompany\blogdinosaurios\JakartaRestConfiguration.class
 controlador\EliminarPublicacion.class
 controlador\IniciarSesion.class
 controlador\Registrarse.class
+controlador\VerPublicacionAncladaAdministrador.class
 com\mycompany\blogdinosaurios\resources\JakartaEE10Resource.class

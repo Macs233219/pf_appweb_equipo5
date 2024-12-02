@@ -44,6 +44,18 @@
         <servlet-name>DesanclarPublicacion</servlet-name>
         <servlet-class>controlador.DesanclarPublicacion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VolverPublicacionesAdministrador</servlet-name>
+        <servlet-class>controlador.VolverPublicacionesAdministrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerPublicacionAdministrador</servlet-name>
+        <servlet-class>controlador.VerPublicacionAdministrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerPublicacionAncladaAdministrador</servlet-name>
+        <servlet-class>controlador.VerPublicacionAncladaAdministrador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -83,6 +95,18 @@
     <servlet-mapping>
         <servlet-name>DesanclarPublicacion</servlet-name>
         <url-pattern>/DesanclarPublicacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VolverPublicacionesAdministrador</servlet-name>
+        <url-pattern>/VolverPublicacionesAdministrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerPublicacionAdministrador</servlet-name>
+        <url-pattern>/VerPublicacionAdministrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerPublicacionAncladaAdministrador</servlet-name>
+        <url-pattern>/VerPublicacionAncladaAdministrador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
