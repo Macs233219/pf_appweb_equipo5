@@ -43,7 +43,9 @@ public class FiltroAutenticacion implements Filter {
         "publicacion.css",
         "registrarse.css",
         "verPublicaciones.css",
-        "crearPublicacion.css"
+        "crearPublicacion.css",
+        "crearPublicacionScript.js",
+        "crearComentarioScript.js"
     };
     // The filter configuration object we are associated with.  If
     // this value is null, this filter instance is not currently

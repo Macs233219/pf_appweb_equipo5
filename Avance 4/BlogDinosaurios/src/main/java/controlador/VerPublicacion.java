@@ -10,6 +10,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManagerFactory;
@@ -21,8 +22,6 @@ import modelo.PostComun;
  * @author marlon
  */
 public class VerPublicacion extends HttpServlet {
-
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -36,14 +35,21 @@ public class VerPublicacion extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id = request.getParameter("id");
-        
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BlogPU");
+//
         FachadaAccesoDatos fad = new FachadaAccesoDatos();
-        
+        String id = request.getParameter("id");
+//        HttpSession session = request.getSession();
+//        session.setAttribute("publicacionActualId", id);
+
+//        PostComun post = fad.obtenerPostComunPorId(Long.parseLong(id));
+//        request.setAttribute("publicacion", post);
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("verPublicacion.jsp");
+//        dispatcher.forward(request, response);
+
         PostComun post = fad.obtenerPostComunPorId(Long.parseLong(id));
-        
         request.setAttribute("publicacion", post);
+        HttpSession session = request.getSession();
+        session.setAttribute("publicacionActualId", post.getId());
         
         RequestDispatcher dispatcher = request.getRequestDispatcher("verPublicacion.jsp");
         dispatcher.forward(request, response);
@@ -60,7 +66,7 @@ public class VerPublicacion extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
     }
 
     /**

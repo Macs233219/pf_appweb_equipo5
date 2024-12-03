@@ -33,14 +33,15 @@
 
             <div class="cuerpo">
                 <h1>Crear una nueva publicación</h1>
-                <div class="linea"></div>
-                <form action="" method="get" enctype="multipart/form-data">
 
+                <div class="linea"></div>
+
+                <form id="informacionPublicacion" method="POST" enctype="multipart/form-data">
                     <div class="contenedor-titulo-etiqueta">
                         <label for="titulo">Título</label>
                         <div>
                             <input class="input-titulo-etiqueta" type="text" name="titulo"
-                                   placeholder="Título de la publicación" required>
+                                   id="titulo" placeholder="Título de la publicación" required>
                         </div>
                     </div>
 
@@ -53,17 +54,17 @@
 
                     <div class="contenedor-file">
                         <label for="archivos">Portada</label>
-                        <input type="file" name="portada" required>
+                        <input type="file" name="imagen-portada" id="portada" required>
                     </div>
                     <div class="linea"></div>
                     <div>
-                        <input class="boton verde-oscuro" type="submit" value="PUBLICAR">
+                        <input class="boton verde-oscuro" type="submit" id="enviar" value="PUBLICAR">
                         <input class="boton verde-claro" type="button" value="VISTA PREVIA">
                     </div>
                 </form>
             </div>
         </div>
-
+        <script src="./scripts/crearPublicacionScript.js"></script>
     </body>
 
 </html>

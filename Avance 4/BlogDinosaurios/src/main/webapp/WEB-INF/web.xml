@@ -56,6 +56,14 @@
         <servlet-name>VerPublicacionAncladaAdministrador</servlet-name>
         <servlet-class>controlador.VerPublicacionAncladaAdministrador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CrearPublicacion</servlet-name>
+        <servlet-class>controlador.CrearPublicacion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CrearComentario</servlet-name>
+        <servlet-class>controlador.CrearComentario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -107,6 +115,14 @@
     <servlet-mapping>
         <servlet-name>VerPublicacionAncladaAdministrador</servlet-name>
         <url-pattern>/VerPublicacionAncladaAdministrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrearPublicacion</servlet-name>
+        <url-pattern>/CrearPublicacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrearComentario</servlet-name>
+        <url-pattern>/CrearComentario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

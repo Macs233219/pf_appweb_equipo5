@@ -99,14 +99,14 @@ public class AnclarPublicacion extends HttpServlet {
         PostComun postComun = fad.obtenerPostComunPorId(Long.valueOf(id));
 
         // CREAR POST ANCLADO
-        PostAnclado postAnclado = new PostAnclado(postComun.getUsuario(), null, postComun.getFechaHoraCreacion(),  
+        PostAnclado postAnclado = new PostAnclado(postComun.getUsuario(), null, postComun.getFechaHoraCreacion(),
                 postComun.getTitulo(), postComun.getContenido(), postComun.getFechaHoraEdicion(), postComun.getPortada(),
                 new ArrayList<>());
 
         // REASIGNAR COMENTARIOS
         for (Comentario comentario : postComun.getComentarios()) {
             comentario.setPost(postAnclado);
-            postAnclado.getComentarios().add(comentario); 
+            postAnclado.getComentarios().add(comentario);
         }
 
         // PERSISTIR POST ANCLADO

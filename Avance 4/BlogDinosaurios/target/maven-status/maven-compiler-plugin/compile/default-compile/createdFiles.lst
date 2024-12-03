@@ -4,6 +4,7 @@ controlador\VolverPublicaciones.class
 controlador\VerPublicacion.class
 controlador\VerPublicacionAdministrador.class
 controlador\VolverPublicacionesAdministrador.class
+controlador\CrearComentario.class
 controlador\DesanclarPublicacion.class
 controlador\FormularioRegistro.class
 controlador\VerPublicacionAnclada.class
@@ -12,5 +13,6 @@ com\mycompany\blogdinosaurios\JakartaRestConfiguration.class
 controlador\EliminarPublicacion.class
 controlador\IniciarSesion.class
 controlador\Registrarse.class
+controlador\CrearPublicacion.class
 controlador\VerPublicacionAncladaAdministrador.class
 com\mycompany\blogdinosaurios\resources\JakartaEE10Resource.class

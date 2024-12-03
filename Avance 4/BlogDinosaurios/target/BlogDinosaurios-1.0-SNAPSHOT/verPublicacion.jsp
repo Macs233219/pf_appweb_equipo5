@@ -53,11 +53,12 @@
                     <img class="foto-perfil" src="${pageContext.request.contextPath}/avatares/${imagenAvatar}" alt="Perfil de usuario"/>
                     <h3>${usuario}</h3>
                 </div>
-                <form action="">
-                    <textarea name="comentario" id="comentario" placeholder="Escribir respuesta..." cols="175" rows="4"
+                <form id="informacion-responder" method="POST">
+                    <input type="hidden" name="publicacionAComentarID"  id="publicacionAComentarID" value="${publicacion.id}">
+                    <textarea name="comentario-nuevo" id="comentario-nuevo" placeholder="Escribir respuesta..." cols="175" rows="4"
                               required></textarea>
                     <div>
-                        <button class="boton">RESPONDER</button>
+                        <input class="boton" type="submit" id="comentar" value="RESPONDER">
                     </div>
                 </form>
             </div>
@@ -73,13 +74,11 @@
                             ${comentario.contenido}
                         </p>
                     </div>
-
                     <hr>
                 </c:forEach>
-
             </div>
         </div>
-
+        <script src="./scripts/crearComentarioScript.js"></script>
     </body>
 
 </html>
